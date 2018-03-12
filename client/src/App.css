@@ -4,12 +4,13 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 180px;
+  width: 100px
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #800000;
+  height: 90px;
   padding: 20px;
   color: white;
 }
@@ -20,6 +21,50 @@
 
 .App-intro {
   font-size: large;
+}
+
+.Past-box {
+  border: 1px solid black ;
+  height: 180px;
+  width: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: #800000;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Present-box {
+  border: 1px solid black ;
+  height: 180px;
+  width: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: #800000;
+  float: right;
+  position: relative;
+  left: -50%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Future-box {
+  border: 1px solid black ;
+  height: 180px;
+  width: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: #800000;
+  float: right;
+  font-size: 20px;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
