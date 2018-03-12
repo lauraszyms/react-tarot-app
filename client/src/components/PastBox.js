@@ -1,23 +1,17 @@
 import React, { Component } from 'react'
 
 class PastBox extends Component {
-// constructor() {
-//    super();
-//
-//    this.state = {
-//      boxContent: 'Past'
-//    }
-//  }
-//
-//  handleClick = () => {
-//   this.setState({
-//     boxContent: '<img src="https://i.imgur.com/zGlHRnf.jpg"/>'
-//   })
-// }
+  constructor() {
+    super();
+
+    this.state = {
+      cardLink: <img src="https://i.imgur.com/zGlHRnf.jpg" className="Past-box" alt="tarotBack" onClick={() => { alert("Show Card Info") }}/>
+    }
+  }
 
 	render () {
-   return <img src="https://i.imgur.com/zGlHRnf.jpg" className="Past-box" alt="tarotBack" onClick={() => { alert("Show Card Info") }}/>
-	}
-}
+	 return this.state.cardLink
+  }
+ }
 
 export default PastBox
