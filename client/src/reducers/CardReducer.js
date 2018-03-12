@@ -9,8 +9,15 @@ function cardReducer(state, action){
   }
 }
 
+function render(){
+    document.setInnerHTML = state.counter
+}
+
 function dispatch(action){
     state = changeState(state, action)
+    render()
 }
+
+
 
 export default cardReducer;
