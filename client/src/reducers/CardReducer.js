@@ -1,7 +1,9 @@
-function cardReducer (state = [], action) {
+function cardReducer(state, action){
   switch (action.type) {
     case 'ADD_CARD':
-      return [...state, action.card];
+      // return {card: card random}
+    case 'REMOVE_CARD':
+      // return {card: card back}
     default:
       return state;
   }
