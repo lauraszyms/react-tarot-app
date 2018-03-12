@@ -9,4 +9,8 @@ function cardReducer(state, action){
   }
 }
 
+function dispatch(action){
+    state = changeState(state, action)
+}
+
 export default cardReducer;
