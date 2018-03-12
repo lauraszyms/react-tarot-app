@@ -1,22 +1,32 @@
-function cardReducer(state, action){
+let state;
+
+function cardReducer(state = {cardLink: <img src="https://i.imgur.com/zGlHRnf.jpg" className="App-logo" alt="tarotBack"/>}, action){
   switch (action.type) {
     case 'ADD_CARD':
-      // return {card: card random}
+      return {cardLink: <img src="https://i.imgur.com/bvdxin4.jpg" className="App-logo" alt="tarotBack"/>}
     case 'REMOVE_CARD':
-      // return {card: card back}
+      return {cardLink: <img src="https://i.imgur.com/zGlHRnf.jpg" className="App-logo" alt="tarotBack"/>}
     default:
       return state;
   }
 }
 
+function dispatch(action){
+  state = changeCount(state, action);
+  render();
+};
+
 function render(){
-    document.setInnerHTML = state.counter
+  let logo = document.getElementById('App-logo');
+  logo.textContent = state.cardLink;
 }
 
-function dispatch(action){
-    state = changeState(state, action)
-    render()
-}
+dispatch({ type: '@@INIT' })
+let appLogo = document.getElementById('App-logo');
+
+appLogo.addEventListener('click', function() {
+    dispatch({ type: 'ADD_CARD' });
+})
 
 
 
