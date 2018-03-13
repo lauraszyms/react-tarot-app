@@ -3,10 +3,10 @@ import React from 'react'
 export default (props) => {
 
   const handleOnClick = () => {
-    props.store.dispatch({ type: 'ADD_CARD' });
+    props.store.dispatch({ type: 'ADD_PAST_CARD' });
   }
 
   return (
-      <div className="Past-box" onClick={handleOnClick}>{props.store.getState().cardLink}</div>
+      <div onClick={handleOnClick}>{props.store.getState().cardLink}</div>
   )
 };

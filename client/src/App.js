@@ -13,8 +13,8 @@ class App extends Component {
       <header className="App-header">
           <TarotBack/>
         </header>
-        <PastBox/>
-        <PresentBox/>
+        <PastBox store={this.props.store}/>
+        <PresentBox store={this.props.store}/>
         <FutureBox store={this.props.store}/>
       </div>
     );
