@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TarotBack from './components/TarotBack'
-import PastBox from './components/PastBox'
-import PresentBox from './components/PresentBox'
-import FutureBox from './components/FutureBox'
+import PastCardShow from './components/PastCardShow';
+import PresentCardShow from './components/PresentCardShow';
+import FutureCardShow from './components/FutureCardShow';
 
 class App extends Component {
   render() {
@@ -13,9 +13,9 @@ class App extends Component {
       <header className="App-header">
           <TarotBack/>
         </header>
-        <PastBox store={this.props.store}/>
-        <PresentBox store={this.props.store}/>
-        <FutureBox store={this.props.store}/>
+        <PastCardShow store={this.props.store}/>
+        <PresentCardShow store={this.props.store}/>
+        <FutureCardShow store={this.props.store}/>
       </div>
     );
   }
