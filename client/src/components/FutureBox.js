@@ -7,6 +7,6 @@ export default (props) => {
   }
 
   return (
-      <div onClick={handleOnClick}>{props.store.getState().cardLink}</div>
+      <div className="Future-box" onClick={handleOnClick}>{props.store.getState().cardLink}</div>
   )
 };
