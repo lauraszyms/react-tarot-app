@@ -11,11 +11,11 @@ class App extends Component {
     return (
       <div className="App">
       <header className="App-header">
-          <TarotBack className="App-logo"/>
+          <TarotBack/>
         </header>
         <PastBox/>
         <PresentBox/>
-        <FutureBox/>
+        <FutureBox store={this.props.store}/>
       </div>
     );
   }

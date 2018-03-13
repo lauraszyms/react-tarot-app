@@ -1,17 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class FutureBox extends Component {
-  constructor() {
-    super();
+export default (props) => {
 
-    this.state = {
-      cardLink: <img src="https://i.imgur.com/zGlHRnf.jpg" className="Future-box" alt="tarotBack" onClick={() => { alert("Show Card Info") }}/>
-    }
+  const handleOnClick = () => {
+    props.store.dispatch({ type: 'ADD_CARD' });
   }
 
-	render () {
-	 return this.state.cardLink
-  }
- }
-
-export default FutureBox
+  return (
+      <div onClick={handleOnClick}>{props.store.getState().cardLink}</div>
+  )
+};
