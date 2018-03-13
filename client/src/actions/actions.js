@@ -1,6 +1,6 @@
 export function addFutureCard(){
   return {
-    type: "ADD_FUTURE_CARD_BOOK",
+    type: "ADD_FUTURE_CARD",
     futureCardLink: futureCardLink: <img className="Future-box" src="https://i.imgur.com/bvdxin4.jpg"/>
   }
 }
