@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TarotBack from './components/TarotBack'
-import PastCardShow from './components/PastCardShow';
-import PresentCardShow from './components/PresentCardShow';
-import FutureCardShow from './components/FutureCardShow';
+import TarotBack from '../components/TarotBack'
+import PastCardShow from '../components/PastCardShow';
+import PresentCardShow from '../components/PresentCardShow';
+import FutureCardShow from '../components/FutureCardShow';
 
 class App extends Component {
   render() {
