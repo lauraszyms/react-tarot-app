@@ -7,7 +7,9 @@ const PresentCardShow = (props) => {
   }
 
   return (
-      <div onClick={handlePresentOnClick}>{props.store.getState().presentCardLink}</div>
+      <div onClick={handlePresentOnClick}>
+       <img className="Present-box" src={props.store.getState().presentCardLink}/>
+      </div>
   )
 };
 

@@ -7,7 +7,9 @@ const PastCardShow = (props) => {
   }
 
   return (
-      <div onClick={handlePastOnClick}>{props.store.getState().pastCardLink}</div>
+      <div onClick={handlePastOnClick}>
+       <img className="Past-box" src={props.store.getState().pastCardLink}/>
+      </div>
   )
 };
 

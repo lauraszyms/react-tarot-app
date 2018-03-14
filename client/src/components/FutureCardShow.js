@@ -8,8 +8,10 @@ const FutureCardShow = (props) => {
   }
 
   return (
-      <div onClick={handleFutureOnClick}>{props.store.getState().futureCardLink}</div>
+      <div onClick={handleFutureOnClick}>
+       <img className="Future-box" src={props.store.getState().futureCardLink}/>
+      </div>
   )
 };
 
-export default FutureCardShow 
+export default FutureCardShow
