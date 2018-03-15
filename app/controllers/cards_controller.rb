@@ -4,5 +4,5 @@ class CardsController < ApplicationController
     @cards = Card.all
     render json: @cards
   end
-  
+
 end
