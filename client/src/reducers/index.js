@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
-import cardsReducer from './cardReducer';
+import { cards, cardsHasErrored, cardsIsLoading } from './cardReducer';
 
 const rootReducer = combineReducers({
-  cards: cardsReducer
+  
+  cards,
+  cardsHasErrored,
+  cardsIsLoading
 });
 
 export default rootReducer;
