@@ -37,17 +37,17 @@ export class App extends Component {
             </header>
             <div>
             {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="Past-box" alt={card.name} src="https://i.imgur.com/bvdxin4.jpg"/> : null
+               card.id === pastId ? <img key={card.id} className="Past-box" alt={card.name} src={card.img}/> : null
             ))}
             </div>
             <div>
             {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="Present-box" alt={card.name} src="https://i.imgur.com/bvdxin4.jpg"/> : null
+               card.id === presentId ? <img key={card.id} className="Present-box" alt={card.name} src={card.img}/> : null
             ))}
             </div>
             <div>
             {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="Future-box" alt={card.name} src="https://i.imgur.com/bvdxin4.jpg"/> : null
+               card.id === futureId ? <img key={card.id} className="Future-box" alt={card.name} src={card.img}/> : null
             ))}
             </div>
           </div>
