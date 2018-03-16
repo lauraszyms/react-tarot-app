@@ -1,21 +1,24 @@
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './reducers/index';
+import thunk from 'redux-thunk';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import { Provider } from 'react-redux';
-import registerServiceWorker from './registerServiceWorker';
-import cardReducer from './reducers/cardReducer';
-import createStore from './createStore';
+import CardList from './components/cardList';
 
-  const store = createStore(cardReducer);
 
-  export function render() {
-    ReactDOM.render(
-      <Provider store={store}>
-       <App store={store}/>
-      </Provider>,
-      document.getElementById('root')
-    );
-  };
+  const store = createStore(rootReducer, {cards: []}, applyMiddleware(thunk));
 
-  store.dispatch({ type: '@@INIT' });
+
+
+      ReactDOM.render(
+        <Provider store={store}>
+         <App />
+        </Provider>,
+        document.getElementById('root')
+      );
+
+
+    store.dispatch({ type: '@@INIT' });

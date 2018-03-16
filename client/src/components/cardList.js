@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux';
+import { cardsFetchData } from '../actions/actions';
 
 const CardList = ({cards}) => {
   function listCards() {
