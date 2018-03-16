@@ -38,9 +38,10 @@ export function cardsFetchData(url) {
     };
 }
 
-export function addFutureCard(){
+export function addFutureCard(card){
   return {
-    type: "ADD_FUTURE_CARD"
+    type: "ADD_FUTURE_CARD",
+    card
   }
 }
 
