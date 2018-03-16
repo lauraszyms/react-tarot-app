@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const PastCardShow = (props) => {
 
   const handlePastOnClick = () => {
@@ -8,8 +9,7 @@ const PastCardShow = (props) => {
 
   return (
       <div onClick={handlePastOnClick}>
-  
-
+       <img className="Past-box" src="https://i.imgur.com/zGlHRnf.jpg"/>
       </div>
   )
 };

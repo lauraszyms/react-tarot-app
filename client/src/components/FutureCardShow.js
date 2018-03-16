@@ -1,16 +1,17 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
 
-const FutureCardShow = (props) => {
+const FutureCardShow = () => {
 
   const handleFutureOnClick = () => {
-    props.store.dispatch({ type: 'ADD_FUTURE_CARD' });
+    this.props.dispatch({ type: 'ADD_FUTURE_CARD' });
   }
-
+// debugger
   return (
-      <div onClick={handleFutureOnClick}>
-      
-      </div>
+
+       <img className="Future-box" src="https://i.imgur.com/zGlHRnf.jpg"/>
+
   )
 };
 

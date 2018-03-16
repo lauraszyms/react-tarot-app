@@ -8,7 +8,7 @@ const PresentCardShow = (props) => {
 
   return (
       <div onClick={handlePresentOnClick}>
-       
+        <img className="Present-box" src="https://i.imgur.com/zGlHRnf.jpg"/>
       </div>
   )
 };
