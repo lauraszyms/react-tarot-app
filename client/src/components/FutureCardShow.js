@@ -9,7 +9,7 @@ const FutureCardShow = (props) => {
 
   return (
       <div onClick={handleFutureOnClick}>
-       <img className="Future-box" src={props.store.getState().futureCardLink}/>
+      
       </div>
   )
 };
