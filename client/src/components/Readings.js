@@ -63,8 +63,13 @@ class Readings extends React.Component {
            </div>
           </div>
 
+          <div className="w3-content w3-container w3-padding-64" id="readings">
+           <h3 className="w3-center">GET ONLINE READING NOW</h3>
+           <p className="w3-center"><em>Concentrate on your question and press button below to shuffle cards<br/></em></p><br/>
+          </div>
+
          <div className="w3-center">
-           <button onClick={this.handleClick} className="w3-button w3-padding-large w3-light-grey" style={{marginTop: '64px'}}>GET ONLINE READING</button>
+           <button onClick={this.handleClick} className="w3-button w3-padding-large w3-light-grey" style={{marginTop: '64px'}}>SHUFFLE CARDS</button>
          </div>
 
          <div id="modal01" className="w3-modal w3-black" onClick={clickStyle}>
