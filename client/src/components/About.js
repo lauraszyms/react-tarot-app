@@ -6,7 +6,7 @@ import React from 'react';
 class About extends React.Component {
 
   handleClick = () => {
-    window.location.assign('http://localhost:3000/cardsInfo');
+    window.location.assign('http://localhost:3000/golden-thread');
   }
 
    render() {

@@ -5,26 +5,28 @@ import { Provider } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/actions.js'
 import { cardsFetchData } from '../actions/actions';
+import Navbar from '../components/Navbar';
 
 
 
 export class GoldenThread extends Component {
 
-  componentDidMount() {
-      this.props.fetchData('http://localhost:3001/cards');
-  }
+  // componentDidMount() {
+  //     this.props.fetchData('http://localhost:3001/cards');
+  // }
 
   render() {
 
-      if (this.props.hasErrored) {
-          return <p>Sorry! There was an error loading the cards</p>;
-      }
-      if (this.props.isLoading) {
-          return <p>Loading…</p>;
-      }
+      // if (this.props.hasErrored) {
+      //     return <p>Sorry! There was an error loading the cards</p>;
+      // }
+      // if (this.props.isLoading) {
+      //     return <p>Loading…</p>;
+      // }
 
       return (
           <div className="golden-thread">
+          <Navbar/>
            <div className="w3-row-padding w3-center w3-section">
             <div className="w3-col m4 l3">
              {this.props.cards.map((card) => (

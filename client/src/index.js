@@ -33,7 +33,7 @@ const store = createStore(
           <div>
            <Route exact path="/" component={Home}/>
            <Route exact path="/reading" component={Reading}/>
-           <Route exact path="/cardInfo" component={GoldenThread}/>
+           <Route exact path="/golden-thread" component={GoldenThread}/>
           </div>
          </ConnectedRouter>
         </Provider>,
