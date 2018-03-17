@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Reading from './containers/Reading';
 import { Provider } from 'react-redux';
-import registerServiceWorker from './registerServiceWorker';
 import GoldenThread from './containers/GoldenThread';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
