@@ -41,21 +41,21 @@ export class Reading extends Component {
             <div className="w3-quarter w3-section" onClick={handleClick()}>
              <h3 className="w3-center" style={{marginLeft: '160px', width: '100%'}}>PAST</h3>
              {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === pastId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
             <div className="w3-quarter w3-section" onClick={handleClick()}>
              <h3 className="w3-center" style={{marginLeft: '180px', width: '100%'}}>PRESENT</h3>
              {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === presentId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
             <div className="w3-quarter w3-section" onClick={handleClick()}>
              <h3 className="w3-center" style={{marginLeft: '200px', width: '100%'}}>FUTURE</h3>
              {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === futureId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
 
           </div>
