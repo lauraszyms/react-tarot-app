@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import TarotBack from '../components/TarotBack'
 import { connect } from 'react-redux';
 import { Provider } from 'react-redux';
-import PastCardShow from '../components/PastCardShow';
-import PresentCardShow from '../components/PresentCardShow';
-import FutureCardShow from '../components/FutureCardShow';
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/actions.js'
-import { addFutureCard, cardsFetchData } from '../actions/actions';
+import { cardsFetchData } from '../actions/actions';
 
 
 
@@ -83,8 +79,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchData: (url) => dispatch(cardsFetchData(url)),
-        futureClick: (cards) => dispatch(addFutureCard(cards))
+        fetchData: (url) => dispatch(cardsFetchData(url))
     };
 };
 

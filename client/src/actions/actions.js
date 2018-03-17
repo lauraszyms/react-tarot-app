@@ -37,24 +37,3 @@ export function cardsFetchData(url) {
             .catch(() => dispatch(cardsHasErrored(true)));
     };
 }
-
-export function addFutureCard(){
-  return {
-    type: "ADD_FUTURE_CARD"
-  }
-}
-
-
-export function addPresentCard(){
-  return {
-    type: "ADD_PRESENT_CARD"
-  }
-}
-
-
-
-export function addPastCard(){
-  return {
-    type: "ADD_PAST_CARD"
-  }
-}

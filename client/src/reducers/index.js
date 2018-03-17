@@ -8,7 +8,6 @@ const rootReducer = combineReducers({
   cards,
   cardsHasErrored,
   cardsIsLoading,
-  addFutureCard,
   router: routerReducer
 });
 
