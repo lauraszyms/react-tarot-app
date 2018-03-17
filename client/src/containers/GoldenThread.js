@@ -27,12 +27,14 @@ export class GoldenThread extends Component {
       return (
           <div className="golden-thread">
           <Navbar/>
-           <div className="w3-row-padding w3-center">
+           <div className="w3-row-padding">
             <div className="w3-col m3">
              {this.props.cards.map((card) => (
                <div>
-               <img src={card.img} className="thumbnail responsive" className="w3-hover-opacity" alt="Golden Thread Tarot" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: 'auto'}}/>
-                <p><b/><i className="fa fa-star-half-full w3-margin-right"></i>{card.name}-<b/><em>{card.key_words}</em></p>
+                <img src={card.img} className="thumbnail responsive" className="w3-hover-opacity" alt="Golden Thread Tarot" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: '600px',}}/>
+               <div style={{width: '100%', marginRight: 'auto', marginLeft: '550px',}}>
+                <p><b/><i className="fa fa-star-half-full w3-center" ></i>{card.name}-<b/><em>{card.key_words}</em></p>
+                </div>
                </div>
              ))}
             </div>
