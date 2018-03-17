@@ -1,67 +1,43 @@
-.Past-box {
-  border: 1px solid black ;
-  height: 280px;
-  width: 190px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
-  background-color: #800000;
-  float: left;
-  font-size: 20px;
-  text-align: center;
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #b48484;
+    line-height: 1.8;
 }
 
-.Present-box {
-  border: 1px solid black ;
-  height: 280px;
-  width: 190px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
-  background-color: #800000;
-  float: right;
-  position: relative;
-  left: -50%;
-  font-size: 20px;
-  text-align: center;
+/* Create a Parallax Effect */
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("https://i.imgur.com/J94KDUA.png");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.Future-box {
-  border: 1px solid black ;
-  height: 280px;
-  width: 190px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
-  background-color: #800000;
-  float: right;
-  font-size: 20px;
-  text-align: center;
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("https://i.imgur.com/9T7tJ6R.png");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.Reading-title {
-  border: 7px solid black ;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  background-color: #800000;
-  font-size: 20px;
-  text-align: center;
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://i.imgur.com/9T7tJ6R.png");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.grid-container {
-  display: grid;
-  height: 280px;
-  grid-template-columns: 20px 100px 500px;
-  grid-template-rows: 80px 200px;
-  justify-content: space-evenly;
-}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/* Turn off parallax scrolling for tablets and phones */

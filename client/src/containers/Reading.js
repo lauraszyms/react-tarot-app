@@ -34,31 +34,38 @@ export class Reading extends Component {
       return (
           <div className="Reading">
            <div className="w3-row-padding w3-center w3-section">
-            <div className="w3-col m4 l3">
+            <div className="w3-col m4 l3" onClick={handleClick()}>
              {this.props.cards.map((card) => (
                card.id === pastId ? <img key={card.id} className="w3-display-bottomleft w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m4 l3">
+            <div className="w3-col m4 l3" onClick={handleClick()}>
              {this.props.cards.map((card) => (
                card.id === presentId ? <img key={card.id} className="w3-display-bottommiddle w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m4 l3">
+            <div className="w3-col m4 l3" onClick={handleClick()}>
              {this.props.cards.map((card) => (
                card.id === futureId ? <img key={card.id} className="w3-display-bottomright w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
-            </div>
-           </div>
+
           </div>
+         </div>
+        </div>
       );
       debugger
   }
 }
 
-// const handleFutureOnClick = (card) => {
-//  let defaultImg = card.img
-// }
+const handleClick = () => {
+  <div id="modal01" className="w3-modal w3-black" onclick="this.style.display='none'">
+    <span className="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i className="fa fa-remove"></i></span>
+    <div className="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" className="w3-image"/>
+      <p id="caption" className="w3-opacity w3-large"></p>
+    </div>
+  </div>
+}
 
 function randomId() {
   let id = Math.floor((Math.random() * 14) + 1);
