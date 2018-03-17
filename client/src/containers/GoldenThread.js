@@ -11,26 +11,29 @@ import Navbar from '../components/Navbar';
 
 export class GoldenThread extends Component {
 
-  // componentDidMount() {
-  //     this.props.fetchData('http://localhost:3001/cards');
-  // }
+  componentDidMount() {
+      this.props.fetchData('http://localhost:3001/cards');
+  }
 
   render() {
 
-      // if (this.props.hasErrored) {
-      //     return <p>Sorry! There was an error loading the cards</p>;
-      // }
-      // if (this.props.isLoading) {
-      //     return <p>Loading…</p>;
-      // }
+      if (this.props.hasErrored) {
+          return <p>Sorry! There was an error loading the cards</p>;
+      }
+      if (this.props.isLoading) {
+          return <p>Loading…</p>;
+      }
 
       return (
           <div className="golden-thread">
           <Navbar/>
-           <div className="w3-row-padding w3-center w3-section">
-            <div className="w3-col m4 l3">
+           <div className="w3-row-padding w3-center">
+            <div className="w3-col m3">
              {this.props.cards.map((card) => (
-               <img src={card.name} className="thumbnail responsive" style={{height: '220px', width: '221px', margin: 'auto'}}/>
+               <div>
+               <img src={card.img} className="thumbnail responsive" className="w3-hover-opacity" alt="Golden Thread Tarot" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: 'auto'}}/>
+                <p><b/><i className="fa fa-star-half-full w3-margin-right"></i>{card.name}-<b/><em>{card.key_words}</em></p>
+               </div>
              ))}
             </div>
            </div>
