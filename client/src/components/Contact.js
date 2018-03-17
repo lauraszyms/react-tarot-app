@@ -20,7 +20,7 @@ class Contact extends React.Component {
 
            <div className="w3-row w3-padding-32 w3-section">
              <div className="w3-col m4 w3-container">
-               <div id="notGoogleMap" className="w3-round-large w3-greyscale" style={{width: '100%', height:'400px'}}></div>
+          
              </div>
              <div className="w3-col m8 w3-panel">
                <div className="w3-large w3-margin-bottom">
