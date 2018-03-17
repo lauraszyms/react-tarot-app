@@ -30,7 +30,12 @@ export class Reading extends Component {
 
       return (
           <div className="Reading">
-          <Navbar/>
+           <Navbar/>
+            <div className="w3-content w3-container w3-padding-64" id="readings">
+             <h3 className="w3-center">Your Reading</h3>
+             <p className="w3-center"><em>A three card spread highlighting elements of your question in the past, present, and future.<br/></em></p><br/>
+            </div>
+
            <div className="w3-row w3-center w3-rosy-brown w3-padding-16">
             <div className="w3-quarter w3-section" onClick={handleClick()}>
              {this.props.cards.map((card) => (

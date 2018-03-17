@@ -37,11 +37,11 @@ class Readings extends React.Component {
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Celtic Cross"/>
+             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Celtic Cross"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Love Reading"/>
+             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Love Reading"/>
            </div>
          </div>
 
