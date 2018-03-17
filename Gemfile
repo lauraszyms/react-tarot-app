@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'active_model_serializers'
 
 gem 'foreman', '~> 0.82.0'
+
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'sass-rails', '>= 3.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
