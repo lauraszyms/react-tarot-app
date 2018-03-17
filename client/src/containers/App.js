@@ -35,19 +35,19 @@ export class App extends Component {
       return (
           <div className="App">
            <div className="w3-row-padding w3-center w3-section">
-            <div className="w3-col m3">
+            <div className="w3-col m4 l3">
              {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+               card.id === pastId ? <img key={card.id} className="w3-display-bottomleft w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m3">
+            <div className="w3-col m4 l3">
              {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+               card.id === presentId ? <img key={card.id} className="w3-display-bottommiddle w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m3">
+            <div className="w3-col m4 l3">
              {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+               card.id === futureId ? <img key={card.id} className="w3-display-bottomright w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
              ))}
             </div>
            </div>
