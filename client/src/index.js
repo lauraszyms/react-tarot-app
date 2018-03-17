@@ -7,8 +7,7 @@ import './index.css';
 import Reading from './containers/Reading';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
-import CardList from './components/cardList';
-import CardsContainer from './containers/CardsContainer';
+import GoldenThread from './containers/GoldenThread';
 import Home from './components/Home';
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
@@ -33,7 +32,7 @@ const store = createStore(
           <div>
            <Route exact path="/" component={Home}/>
            <Route exact path="/reading" component={Reading}/>
-           <Route exact path="/cardInfo" component={CardsContainer}/>
+           <Route exact path="/cardInfo" component={GoldenThread}/>
           </div>
          </ConnectedRouter>
         </Provider>,

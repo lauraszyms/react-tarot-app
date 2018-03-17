@@ -12,7 +12,7 @@ import { addFutureCard, cardsFetchData } from '../actions/actions';
 
 
 
-export class Reading extends Component {
+export class GoldenThread extends Component {
 
   componentDidMount() {
       this.props.fetchData('http://localhost:3001/cards');
@@ -27,43 +27,20 @@ export class Reading extends Component {
           return <p>Loading…</p>;
       }
 
-      let pastId = randomId()
-      let presentId = randomId()
-      let futureId = randomId()
-
       return (
-          <div className="Reading">
+          <div className="golden-thread">
            <div className="w3-row-padding w3-center w3-section">
             <div className="w3-col m4 l3">
              {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="w3-display-bottomleft w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
-             ))}
-            </div>
-            <div className="w3-col m4 l3">
-             {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="w3-display-bottommiddle w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
-             ))}
-            </div>
-            <div className="w3-col m4 l3">
-             {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-display-bottomright w3-image w3-border w3-padding w3-hover-opacity" alt={card.name} src={card.img}/> : null
+               <img src={card.name} className="thumbnail responsive" style={{height: '220px', width: '221px', margin: 'auto'}}/>
              ))}
             </div>
            </div>
           </div>
       );
-      debugger
   }
 }
 
-// const handleFutureOnClick = (card) => {
-//  let defaultImg = card.img
-// }
-
-function randomId() {
-  let id = Math.floor((Math.random() * 14) + 1);
-   return id;
-}
 
 const mapStateToProps = (state) => {
     return {
@@ -81,9 +58,9 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const ReadingContainer = connect(
+const GoldenThreadContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Reading);
+)(GoldenThread);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Reading);
+export default connect(mapStateToProps, mapDispatchToProps)(GoldenThread);
