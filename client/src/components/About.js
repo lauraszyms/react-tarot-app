@@ -20,10 +20,10 @@ class About extends React.Component {
 
           <div className="w3-row">
             <div className="w3-col m6 w3-center w3-padding-large">
-              <p><b/><i className="fa fa-star-half-full w3-margin-right"></i>Golden Thread Deck -<b/><em> Click to learn more</em></p>
-              <img onClick={this.handleClick} src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Photo of Me" width="500" height="333"/>
+              <p><b/><i className="fa fa-star-half-full "></i>Golden Thread Deck -<b/><em> Click to learn more</em></p>
+              <img onClick={this.handleClick} src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Tarot Photo" width="500" height="333"/>
             </div>
-          </div>
+
 
           <div className="w3-col m6 w3-hide-small w3-padding-large w3-right">
             <p>Tarot.<br/><br/>Most people think of tarot as fourtune telling but there are minimal predictive cards in the readings I do.
@@ -51,6 +51,7 @@ class About extends React.Component {
           </div>
 
           </div>
+         </div>
         </div>
       );
     }

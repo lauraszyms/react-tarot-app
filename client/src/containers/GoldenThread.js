@@ -26,7 +26,18 @@ export class GoldenThread extends Component {
 
       return (
           <div className="golden-thread">
-          <Navbar/>
+           <div className="Navbar">
+            <div className="w3-top">
+             <div className="w3-bar" id="myNavbar">
+              <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+               <i className="fa fa-bars"></i>
+              </a>
+              <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
+              </div>
+             <div id="navDemo" className="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            </div>
+           </div>
+          </div>
 
           <div className="w3-content w3-container w3-padding-64" id="readings">
            <h3 className="w3-center">Golden Thread Tarot</h3>

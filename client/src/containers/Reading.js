@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions/actions.js'
 import { cardsFetchData } from '../actions/actions';
-import Navbar from '../components/Navbar';
+
 
 
 
@@ -30,11 +30,23 @@ export class Reading extends Component {
 
       return (
           <div className="Reading">
-           <Navbar/>
-            <div className="w3-content w3-container w3-padding-64" id="readings">
-             <h3 className="w3-center">Your Reading</h3>
-             <p className="w3-center"><em>A three card spread highlighting elements of your question in the past, present, and future.<br/>Click card for description.</em></p><br/>
+           <div className="Navbar">
+            <div className="w3-top">
+             <div className="w3-bar" id="myNavbar">
+               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i className="fa fa-bars"></i>
+               </a>
+               <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
+               </div>
+              <div id="navDemo" className="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+             </div>
             </div>
+           </div>
+
+           <div className="w3-content w3-container w3-padding-64" id="readings">
+            <h3 className="w3-center">Your Reading</h3>
+            <p className="w3-center"><em>A three card spread highlighting elements of your question in the past, present, and future.<br/>Click card for description.</em></p><br/>
+           </div>
 
            <div className="w3-row w3-center w3-rosy-brown w3-padding-16">
 
