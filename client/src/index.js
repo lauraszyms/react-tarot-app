@@ -4,20 +4,38 @@ import thunk from 'redux-thunk';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './containers/App';
+import Reading from './containers/Reading';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import CardList from './components/cardList';
-import configureStore from './store/configureStore';
+import CardsContainer from './containers/CardsContainer';
+import Home from './components/Home';
+import createHistory from 'history/createBrowserHistory'
+import { Route } from 'react-router'
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 
 
-const store = configureStore();
+const history = createHistory()
+const middleware = routerMiddleware(history)
+
+
+const store = createStore(
+     rootReducer,
+     [],
+     applyMiddleware(thunk, middleware)
+   );
 
 
 
       ReactDOM.render(
         <Provider store={store}>
-         <App />
+         <ConnectedRouter history={history}>
+          <div>
+           <Route exact path="/" component={Home}/>
+           <Route exact path="/reading" component={Reading}/>
+           <Route exact path="/cardInfo" component={CardsContainer}/>
+          </div>
+         </ConnectedRouter>
         </Provider>,
         document.getElementById('root')
       );
