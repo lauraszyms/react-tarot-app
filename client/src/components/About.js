@@ -5,6 +5,10 @@ import React from 'react';
 
 class About extends React.Component {
 
+  handleClick = () => {
+    window.location.assign('http://localhost:3000/cardsInfo');
+  }
+
    render() {
       return (
         <div className="About">
@@ -17,7 +21,7 @@ class About extends React.Component {
           <div className="w3-row">
             <div className="w3-col m6 w3-center w3-padding-large">
               <p><b/><i className="fa fa-star-half-full w3-margin-right"></i>Golden Thread Deck -<b/><em> Click to learn more</em></p>
-              <img onclick="location.href = 'http://localhost:3000/cardsInfo'" src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Photo of Me" width="500" height="333"/>
+              <img onClick={this.handleClick} src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Photo of Me" width="500" height="333"/>
             </div>
           </div>
 

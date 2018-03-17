@@ -4,6 +4,9 @@ import './App.css';
 
 
 class Readings extends React.Component {
+  handleClick = () => {
+    window.location.assign('http://localhost:3000/reading');
+  }
 
    render() {
 
@@ -61,7 +64,7 @@ class Readings extends React.Component {
           </div>
 
          <div className="w3-center">
-           <button onClick="href='http://localhost:3000/reading'" className="w3-button w3-padding-large w3-light-grey" style={{marginTop: '64px'}}>GET ONLINE READING</button>
+           <button onClick={this.handleClick} className="w3-button w3-padding-large w3-light-grey" style={{marginTop: '64px'}}>GET ONLINE READING</button>
          </div>
 
          <div id="modal01" className="w3-modal w3-black" onClick={clickStyle}>
@@ -77,6 +80,7 @@ class Readings extends React.Component {
       );
     }
   }
+
 
 
 
