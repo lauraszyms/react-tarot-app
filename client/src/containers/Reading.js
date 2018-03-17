@@ -31,20 +31,20 @@ export class Reading extends Component {
       return (
           <div className="Reading">
           <Navbar/>
-           <div className="w3-row-padding w3-center">
-            <div className="w3-col m3" onClick={handleClick()}>
+           <div className="w3-row w3-center w3-rosy-brown w3-padding-16">
+            <div className="w3-quarter w3-section" onClick={handleClick()}>
              {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === pastId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m3" onClick={handleClick()}>
+            <div className="w3-quarter w3-section" onClick={handleClick()}>
              {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === presentId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
-            <div className="w3-col m3" onClick={handleClick()}>
+            <div className="w3-quarter w3-section" onClick={handleClick()}>
              {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === futureId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
 
           </div>

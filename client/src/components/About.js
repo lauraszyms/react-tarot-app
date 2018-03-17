@@ -21,7 +21,7 @@ class About extends React.Component {
             </div>
           </div>
 
-          <div className="w3-col m6 w3-hide-small w3-padding-large">
+          <div className="w3-col m6 w3-hide-small w3-padding-large w3-right">
             <p>Tarot.<br/><br/>Most people think of tarot as fourtune telling but there are minimal predictive cards in the readings I do.
               Tarot was created to symbolize the universal struggles and truths that are common to the human experience. Less fortune telling and more advice giving,
               there is still an esoteric and mysterious art to reading the tarot cards. However, we must always remember our agency, the cards are mearly a tool for searching within ourselves and our situations and to use caution to remain responisble for our actions despite what the cards tell us. </p>
