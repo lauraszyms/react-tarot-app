@@ -33,21 +33,27 @@ export class Reading extends Component {
            <Navbar/>
             <div className="w3-content w3-container w3-padding-64" id="readings">
              <h3 className="w3-center">Your Reading</h3>
-             <p className="w3-center"><em>A three card spread highlighting elements of your question in the past, present, and future.<br/></em></p><br/>
+             <p className="w3-center"><em>A three card spread highlighting elements of your question in the past, present, and future.<br/>Click card for description.</em></p><br/>
             </div>
 
            <div className="w3-row w3-center w3-rosy-brown w3-padding-16">
+
             <div className="w3-quarter w3-section" onClick={handleClick()}>
+             <h3 className="w3-center" style={{marginLeft: '160px', width: '100%'}}>PAST</h3>
              {this.props.cards.map((card) => (
                card.id === pastId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
+
             <div className="w3-quarter w3-section" onClick={handleClick()}>
+             <h3 className="w3-center" style={{marginLeft: '180px', width: '100%'}}>PRESENT</h3>
              {this.props.cards.map((card) => (
                card.id === presentId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
+
             <div className="w3-quarter w3-section" onClick={handleClick()}>
+             <h3 className="w3-center" style={{marginLeft: '200px', width: '100%'}}>FUTURE</h3>
              {this.props.cards.map((card) => (
                card.id === futureId ? <img key={card.id} className="w3-border w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
