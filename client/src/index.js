@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import GoldenThread from './containers/GoldenThread';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'

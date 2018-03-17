@@ -1,4 +1,10 @@
 import React from 'react';
+import './App.css';
+import Navbar from '../components/Navbar';
+import About from '../components/About';
+import Readings from '../components/Readings';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 
 
@@ -8,6 +14,11 @@ class Home extends React.Component {
    render() {
       return (
         <div className="Home">
+         <Navbar/>
+         <About/>
+         <Readings/>
+         <Contact/>
+         <Footer/>
         </div>
       );
     }
