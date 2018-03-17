@@ -8,9 +8,10 @@ import App from './containers/App';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import CardList from './components/cardList';
+import configureStore from './store/configureStore';
 
 
-  const store = createStore(rootReducer, {cards: []}, applyMiddleware(thunk));
+const store = configureStore();
 
 
 

@@ -14,12 +14,13 @@ import { addFutureCard, cardsFetchData } from '../actions/actions';
 
 
 export class App extends Component {
+
   componentDidMount() {
       this.props.fetchData('http://localhost:3001/cards');
   }
 
   render() {
-    // debugger
+
       if (this.props.hasErrored) {
           return <p>Sorry! There was an error loading the cards</p>;
       }
@@ -33,27 +34,32 @@ export class App extends Component {
 
       return (
           <div className="App">
-          <header className="App-header">
-            </header>
-            <div>
-            {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="Past-box" alt={card.name} src={card.img}/> : null
-            ))}
+           <div className="w3-row-padding w3-center w3-section">
+            <div className="w3-col m3">
+             {this.props.cards.map((card) => (
+               card.id === pastId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+             ))}
             </div>
-            <div>
-            {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="Present-box" alt={card.name} src={card.img}/> : null
-            ))}
+            <div className="w3-col m3">
+             {this.props.cards.map((card) => (
+               card.id === presentId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+             ))}
             </div>
-            <div>
-            {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="Future-box" alt={card.name} src={card.img}/> : null
-            ))}
+            <div className="w3-col m3">
+             {this.props.cards.map((card) => (
+               card.id === futureId ? <img key={card.id} className="w3-hover-opacity width:100%" alt={card.name} src={card.img}/> : null
+             ))}
             </div>
+           </div>
           </div>
       );
+      debugger
   }
 }
+
+// const handleFutureOnClick = (card) => {
+//  let defaultImg = card.img
+// }
 
 function randomId() {
   let id = Math.floor((Math.random() * 14) + 1);
@@ -72,7 +78,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchData: (url) => dispatch(cardsFetchData(url)),
-        futureClick: (card) => dispatch(addFutureCard(card))
+        futureClick: (cards) => dispatch(addFutureCard(cards))
     };
 };
 

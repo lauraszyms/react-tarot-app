@@ -7,10 +7,6 @@ export function cardReducer(state = {
   cards: []
 }, action) {
   switch (action.type) {
-    case 'LOADING_CARDS':
-      return Object.assign({}, state, {loading: true});
-    case 'FETCH_CARDS':
-      return { loading: false, cards: action.payload} ;
     case 'ADD_PRESENT_CARD':
       return {...state, presentCardLink: "https://i.imgur.com/bvdxin4.jpg"}
     case 'ADD_PAST_CARD':
@@ -20,11 +16,10 @@ export function cardReducer(state = {
   }
 }
 
-export function addFutureCard(state = "https://i.imgur.com/zGlHRnf.jpg", action) {
+export function addFutureCard(state = {cards: []}, action) {
     switch (action.type) {
       case 'ADD_FUTURE_CARD':
-      console.log("in future card")
-        return action.addFutureCard
+        return  state
         default:
             return state;
     }

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { cards, cardsHasErrored, cardsIsLoading, addFutureCard } from './cardReducer';
+import { cards, cardsHasErrored, cardsIsLoading, addFutureCard } from './CardReducer';
 
 const rootReducer = combineReducers({
 
