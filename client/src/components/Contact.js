@@ -20,7 +20,7 @@ class Contact extends React.Component {
 
            <div className="w3-row w3-padding-32 w3-section">
              <div className="w3-col m4 w3-container">
-               <div id="notGoogleMap" className="w3-round-large w3-greyscale width:100%;height:400px;"></div>
+               <div id="notGoogleMap" className="w3-round-large w3-greyscale" style={{width: '100%', height:'400px'}}></div>
              </div>
              <div className="w3-col m8 w3-panel">
                <div className="w3-large w3-margin-bottom">
@@ -30,7 +30,7 @@ class Contact extends React.Component {
                </div>
                <p>Contact with questions <i className="fa fa-star-o"></i>, or for more info on in person readings:</p>
                <form action="/action_page.php" target="_blank">
-                 <div className="w3-row-padding margin:0 -16px 8px -16px">
+                 <div className="w3-row-padding" style={{marginTop:'0', marginRight: '-16px', marginBottom: '8px', marginLeft: '-16px'}}>
                    <div className="w3-half">
                      <input className="w3-input w3-border" type="text" placeholder="Name" required name="Name"/>
                    </div>
