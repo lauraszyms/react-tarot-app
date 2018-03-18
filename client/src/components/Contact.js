@@ -36,7 +36,8 @@ constructor() {
 
 
 
- handleSubmit = () => {
+ handleSubmit = (e) => {
+   e.preventDefault();
   createComment(this.state);
 }
 
@@ -65,7 +66,7 @@ constructor() {
                  <i className="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: lola@ohlolatarot.com<br/>
                </div>
                <p>Contact with questions <i className="fa fa-star-o"></i>, or for more info on in person readings:</p>
-               <form onSubmit={this.handleSubmit}>
+               <form onSubmit={this.handleSubmit} encType="form-data">
                  <div className="w3-row-padding" style={{marginTop:'0', marginRight: '-16px', marginBottom: '8px', marginLeft: '-16px'}}>
                    <div className="w3-half">
                      <input type="text"
@@ -76,7 +77,7 @@ constructor() {
                             className="form-control w3-input w3-border"
                             type="text"
                             placeholder="Name"
-                            required name="Name"/>
+                            required name="name"/>
                    </div>
                    <div className="w3-half">
                      <input type="text"
@@ -87,7 +88,7 @@ constructor() {
                             className="form-control w3-input w3-border"
                             type="text"
                             placeholder="Email"
-                            required name="Email"/>
+                            required name="email"/>
                    </div>
                  </div>
                     <input type="text"
@@ -98,7 +99,7 @@ constructor() {
                            className="form-control w3-input w3-border"
                            type="text"
                            placeholder="Message"
-                           required name="Message"/>
+                           required name="content"/>
                  <button className="w3-button w3-black w3-right w3-section" type="submit">
                    <i className="fa fa-paper-plane"></i> SEND MESSAGE
                  </button>
