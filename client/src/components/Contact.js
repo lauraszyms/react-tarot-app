@@ -34,8 +34,10 @@ constructor() {
      });
  }
 
- handleSubmit(data) {
-  createComment(data);
+
+
+ handleSubmit = () => {
+  createComment(this.state);
 }
 
    render() {
