@@ -12,6 +12,10 @@ export class Reading extends Component {
       this.props.fetchData('http://localhost:3001/cards');
   }
 
+  handleClick = () => {
+    window.location.assign('http://localhost:3000/golden-thread');
+  }
+
   render() {
       if (this.props.hasErrored) {
           return <p>Sorry! There was an error loading the cards</p>;
@@ -29,7 +33,7 @@ export class Reading extends Component {
            <div className="Navbar">
             <div className="w3-top">
              <div className="w3-bar" id="myNavbar">
-               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Toggle Navigation Menu">
+               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
                 <i className="fa fa-bars"></i>
                </a>
                <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
@@ -49,21 +53,21 @@ export class Reading extends Component {
             <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '160px', width: '100%'}}>PAST</h3>
              {this.props.cards.map((card) => (
-               card.id === pastId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === pastId ? <img key={card.id} className="w3-padding w3-hover-opacity" onClick={this.handleClick} style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
             <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '180px', width: '100%'}}>PRESENT</h3>
              {this.props.cards.map((card) => (
-               card.id === presentId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === presentId ? <img key={card.id} className="w3-padding w3-hover-opacity" onClick={this.handleClick} style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
             <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '200px', width: '100%'}}>FUTURE</h3>
              {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%', marginBottom: '200px'}} alt={card.name} src={card.img}/> : null
+               card.id === futureId ? <img key={card.id} className="w3-padding w3-hover-opacity" onClick={this.handleClick} style={{marginLeft: '200px', width: '100%', marginBottom: '200px'}} alt={card.name} src={card.img}/> : null
              ))}
 
           </div>
@@ -100,5 +104,9 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
+const ReadingContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Reading);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Reading);
