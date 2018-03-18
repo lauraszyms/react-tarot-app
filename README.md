@@ -1,24 +1,37 @@
-# README
+# REACT-TAROT-APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to react-tarot-app! A tarot app built with react/redux and a ruby API. Here are the steps to take after cloning my repo to get the app up and running.
 
-Things you may want to cover:
+* Ruby version: "2.3.1"
 
-* Ruby version
+## Installation
+Type into console to install dependencies:
 
-* System dependencies
+- cd react-tarot-app
+- bundle install
+- cd client
+- npm install
+- cd ..
 
-* Configuration
+## Database creation
+Type into console to create database:
 
-* Database creation
+- rake db:migrate
+- rake db:seed
 
-* Database initialization
+## Deployment instructions
+Type into console to start servers:
 
-* How to run the test suite
+- rake start
 
-* Services (job queues, cache servers, search engines, etc.)
+## Usage
 
-* Deployment instructions
+* Use the navbar at the top or scroll down the home page to see each section. The About section links to a page listing information on each tarot card and their meanings. A link in the Readings section will give you an AI tarot reading. The contact section has a form for messaging a comment or requesting and in person reading. Enjoy!
 
-* ...
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/<lauraszyms>/react-tarot-app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The app is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
