@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { Provider } from 'react-redux';
-import { bindActionCreators } from 'redux'
-import * as actions from '../actions/actions.js'
 import { cardsFetchData } from '../actions/actions';
-import Navbar from '../components/Navbar';
 
 
 
@@ -29,7 +25,7 @@ export class GoldenThread extends Component {
            <div className="Navbar">
             <div className="w3-top">
              <div className="w3-bar" id="myNavbar">
-              <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
+              <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Toggle Navigation Menu">
                <i className="fa fa-bars"></i>
               </a>
               <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
@@ -48,7 +44,7 @@ export class GoldenThread extends Component {
             <div className="w3-col m3">
              {this.props.cards.map((card) => (
                <div>
-                <img src={card.img} className="thumbnail responsive" className="w3-hover-opacity" alt="Golden Thread Tarot" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: '630px',}}/>
+                <img src={card.img} className="thumbnail responsive w3-hover-opacity" alt="Golden Thread" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: '630px',}}/>
                <div style={{width: '100%', marginRight: 'auto', marginLeft: '550px',}}>
                 <p><b/><i className="fa fa-star-half-full w3-center" ></i>{card.name}-<b/><em>{card.key_words}</em></p>
                 </div>
@@ -76,10 +72,5 @@ const mapDispatchToProps = (dispatch) => {
         fetchData: (url) => dispatch(cardsFetchData(url))
     };
 };
-
-const GoldenThreadContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GoldenThread);
 
 export default connect(mapStateToProps, mapDispatchToProps)(GoldenThread);

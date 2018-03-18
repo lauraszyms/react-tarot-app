@@ -21,7 +21,7 @@ class About extends React.Component {
           <div className="w3-row">
             <div className="w3-col m6 w3-center w3-padding-large">
               <p><b/><i className="fa fa-star-half-full "></i>Golden Thread Deck -<b/><em> Click to learn more</em></p>
-              <img onClick={this.handleClick} src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Tarot Photo" width="500" height="333"/>
+              <img onClick={this.handleClick} src="https://i.imgur.com/Ek9GIkO.png" className="w3-round w3-image w3-hover-opacity" alt="Tarot" width="500" height="333"/>
             </div>
 
 
@@ -57,12 +57,12 @@ class About extends React.Component {
     }
   }
 
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
+  // function onClick(element) {
+  //   document.getElementById("img01").src = element.src;
+  //   document.getElementById("modal01").style.display = "block";
+  //   var captionText = document.getElementById("caption");
+  //   captionText.innerHTML = element.alt;
+  // }
 
 
 

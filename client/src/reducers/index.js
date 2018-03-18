@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { cards, cardsHasErrored, cardsIsLoading, addFutureCard } from './CardReducer';
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+import { cards, cardsHasErrored, cardsIsLoading  } from './CardReducer';
+import { routerReducer } from 'react-router-redux'
 
 
 const rootReducer = combineReducers({

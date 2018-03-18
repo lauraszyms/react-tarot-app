@@ -1,5 +1,3 @@
-import React from 'react'
-
 export function cardsHasErrored(state = false, action) {
     switch (action.type) {
         case 'CARDS_HAS_ERRORED':

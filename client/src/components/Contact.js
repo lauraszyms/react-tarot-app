@@ -75,9 +75,7 @@ constructor() {
                             value={this.state.name}
                             onChange={this.handleNameChange}
                             className="form-control w3-input w3-border"
-                            type="text"
-                            placeholder="Name"
-                            required name="name"/>
+                            placeholder="Name"/>
                    </div>
                    <div className="w3-half">
                      <input type="text"
@@ -86,9 +84,7 @@ constructor() {
                             value={this.state.email}
                             onChange={this.handleEmailChange}
                             className="form-control w3-input w3-border"
-                            type="text"
-                            placeholder="Email"
-                            required name="email"/>
+                            placeholder="Email"/>
                    </div>
                  </div>
                     <input type="text"
@@ -97,9 +93,7 @@ constructor() {
                            value={this.state.content}
                            onChange={this.handleContentChange}
                            className="form-control w3-input w3-border"
-                           type="text"
-                           placeholder="Message"
-                           required name="content"/>
+                           placeholder="Message"/>
                  <button className="w3-button w3-black w3-right w3-section" type="submit">
                    <i className="fa fa-paper-plane"></i> SEND MESSAGE
                  </button>
