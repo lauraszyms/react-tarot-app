@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    binding.pry
    @comment = Comment.create(comment_params)
     if @comment.valid?
      @comment.save
