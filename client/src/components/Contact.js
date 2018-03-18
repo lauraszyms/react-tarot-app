@@ -37,7 +37,7 @@ constructor() {
 
 
  handleSubmit = (e) => {
-   e.preventDefault();
+  alert("Thank you for your message!")
   createComment(this.state);
 }
 
