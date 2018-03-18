@@ -29,7 +29,7 @@ export class GoldenThread extends Component {
            <div className="Navbar">
             <div className="w3-top">
              <div className="w3-bar" id="myNavbar">
-              <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+              <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
                <i className="fa fa-bars"></i>
               </a>
               <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
