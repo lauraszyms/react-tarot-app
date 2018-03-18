@@ -39,9 +39,10 @@ export function cardsFetchData(url) {
 }
 
 export function createComment(data) {
-    return fetch('http://localhost:3001/comments/new', {
+  console.log(JSON.stringify(data))
+    return fetch('http://localhost:3001/comments', {
         method: 'POST',
-        mode: 'CORS',
+        mode: 'no-cors',
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
