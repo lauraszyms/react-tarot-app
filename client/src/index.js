@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers/index';
 import thunk from 'redux-thunk';
 import React from 'react';
@@ -18,11 +18,10 @@ const history = createHistory()
 const middleware = routerMiddleware(history)
 
 
-const store = createStore(
-     rootReducer,
-     {},
-     applyMiddleware(thunk, middleware)
-   );
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancers(
+  applyMiddleware(thunk)
+));
 
 
 
@@ -30,7 +29,7 @@ const store = createStore(
         <Provider store={store}>
          <ConnectedRouter history={history}>
           <div>
-           <Route exact path="/" component={Home}/>
+           <Route exact path="/" component={Home} store={store}/>
            <Route exact path="/reading" component={Reading}/>
            <Route exact path="/golden-thread" component={GoldenThread}/>
           </div>
