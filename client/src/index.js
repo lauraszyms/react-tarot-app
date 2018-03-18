@@ -30,8 +30,8 @@ const store = createStore(rootReducer, composeEnhancers(
          <ConnectedRouter history={history}>
           <div>
            <Route exact path="/" component={Home} store={store}/>
-           <Route exact path="/reading" component={Reading}/>
-           <Route exact path="/golden-thread" component={GoldenThread}/>
+           <Route path="/reading" component={Reading}/>
+           <Route path="/golden-thread" component={GoldenThread}/>
           </div>
          </ConnectedRouter>
         </Provider>,
