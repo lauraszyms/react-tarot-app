@@ -20,7 +20,7 @@ const middleware = routerMiddleware(history)
 
 const store = createStore(
      rootReducer,
-     [],
+     {},
      applyMiddleware(thunk, middleware)
    );
 
@@ -38,6 +38,3 @@ const store = createStore(
         </Provider>,
         document.getElementById('root')
       );
-
-
-    store.dispatch({ type: '@@INIT' });

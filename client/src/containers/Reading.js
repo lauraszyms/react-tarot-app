@@ -16,7 +16,6 @@ export class Reading extends Component {
   }
 
   render() {
-
       if (this.props.hasErrored) {
           return <p>Sorry! There was an error loading the cards</p>;
       }
@@ -33,7 +32,7 @@ export class Reading extends Component {
            <div className="Navbar">
             <div className="w3-top">
              <div className="w3-bar" id="myNavbar">
-               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" title="Toggle Navigation Menu">
                 <i className="fa fa-bars"></i>
                </a>
                <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
@@ -50,43 +49,36 @@ export class Reading extends Component {
 
            <div className="w3-row w3-center w3-rosy-brown w3-padding-16">
 
-            <div className="w3-quarter w3-section" onClick={handleClick()}>
+            <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '160px', width: '100%'}}>PAST</h3>
              {this.props.cards.map((card) => (
                card.id === pastId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '160px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
-            <div className="w3-quarter w3-section" onClick={handleClick()}>
+            <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '180px', width: '100%'}}>PRESENT</h3>
              {this.props.cards.map((card) => (
                card.id === presentId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '180px', width: '100%'}} alt={card.name} src={card.img}/> : null
              ))}
             </div>
 
-            <div className="w3-quarter w3-section" onClick={handleClick()}>
+            <div className="w3-quarter w3-section">
              <h3 className="w3-center" style={{marginLeft: '200px', width: '100%'}}>FUTURE</h3>
              {this.props.cards.map((card) => (
-               card.id === futureId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%'}} alt={card.name} src={card.img}/> : null
+               card.id === futureId ? <img key={card.id} className="w3-padding w3-hover-opacity" style={{marginLeft: '200px', width: '100%', marginBottom: '200px'}} alt={card.name} src={card.img}/> : null
              ))}
 
           </div>
          </div>
         </div>
       );
-      debugger
+
   }
+
 }
 
-const handleClick = () => {
-  <div id="modal01" className="w3-modal w3-black" onclick="this.style.display='none'">
-    <span className="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i className="fa fa-remove"></i></span>
-    <div className="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" className="w3-image"/>
-      <p id="caption" className="w3-opacity w3-large"></p>
-    </div>
-  </div>
-}
+
 
 function randomId() {
   let id = Math.floor((Math.random() * 14) + 1);
@@ -98,6 +90,9 @@ const mapStateToProps = (state) => {
         cards: state.cards,
         hasErrored: state.cardsHasErrored,
         isLoading: state.cardsIsLoading,
+        pastCard: state.pastCard,
+        presentCard: state.presentCard,
+        futureCard: state.pastCard,
     };
 };
 
