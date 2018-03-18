@@ -10,10 +10,6 @@ class Readings extends React.Component {
 
    render() {
 
-       let clickStyle = {
-       display: 'none',
-       };
-
       return (
         <div className="Readings">
          <div className="bgimg-2 w3-display-container w3-opacity-min">
@@ -72,13 +68,6 @@ class Readings extends React.Component {
            <button onClick={this.handleClick} className="w3-button w3-padding-large w3-light-grey" style={{marginTop: '64px'}}>SHUFFLE CARDS</button>
          </div>
 
-         <div id="modal01" className="w3-modal w3-black" onClick={clickStyle}>
-           <span className="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i className="fa fa-remove"></i></span>
-           <div className="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-             <img id="img01" className="w3-image"/>
-             <p id="caption" className="w3-opacity w3-large"></p>
-           </div>
-         </div>
        </div>
 
 
