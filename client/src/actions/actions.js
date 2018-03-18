@@ -41,12 +41,11 @@ export function createComment(data) {
   console.log(JSON.stringify(data))
     return fetch('http://localhost:3001/comments', {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'CORS',
         headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
     }).then(res => {
         return res;
     }).catch(err => err);

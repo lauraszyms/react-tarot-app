@@ -31,6 +31,8 @@ gem 'active_model_serializers'
 gem 'foreman', '~> 0.82.0'
 
 gem 'bootstrap-sass', '~> 3.3.7'
+
+gem 'rack-cors'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
