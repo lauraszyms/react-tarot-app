@@ -25,37 +25,37 @@ class Readings extends React.Component {
 
          <div className="w3-row-padding w3-center">
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="One Card Spread"/>
+             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} alt="One Card Spread"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Three Card Spread"/>
+             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} alt="Three Card Spread"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Celtic Cross"/>
+             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} alt="Celtic Cross"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Love Reading"/>
+             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} alt="Love Reading"/>
            </div>
          </div>
 
          <div className="w3-row-padding w3-center w3-section">
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Career Reading"/>
+             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} alt="Career Reading"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Family Reading"/>
+             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} alt="Family Reading"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} className="w3-hover-opacity" alt="New Years Reading"/>
+             <img src="https://i.imgur.com/a0XmzIo.png" style={{width: '100%'}} alt="New Years Reading"/>
            </div>
 
            <div className="w3-col m3">
-             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} className="w3-hover-opacity" alt="Birthday Reading"/>
+             <img src="https://i.imgur.com/AHwI0yD.png" style={{width: '100%'}} alt="Birthday Reading"/>
            </div>
           </div>
 
