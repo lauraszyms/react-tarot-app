@@ -1,6 +1,6 @@
 # REACT-TAROT-APP
 
-Welcome to react-tarot-app! A tarot app built with react/redux and a ruby API. Here are the steps to take after cloning my repo to get the app up and running.
+Welcome to react-tarot-app! A tarot app built with react/redux and a rails API. Here are the steps to take after cloning my repo to get the app up and running.
 
 * Ruby version: "2.3.1"
 
