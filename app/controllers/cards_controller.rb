@@ -1,5 +1,4 @@
 class CardsController < ApplicationController
-    before_action :set_card, only: [:show, :edit, :update]
     skip_before_action :verify_authenticity_token
 
   def index
@@ -8,6 +7,7 @@ class CardsController < ApplicationController
   end
 
   def show
+    @card = Card.find_by(:id => params[:id])
    render json: @card
   end
 
@@ -20,10 +20,18 @@ class CardsController < ApplicationController
   end
 
   def edit
+   @card = Card.find_by(:id => params[:id])
   end
 
   def update
+   @card = Card.find_by(:id => params[:id])
+  #  binding.remote_pry
    @card.update(card_params)
+
+    if @card.save
+     render json: @card
+   else puts "NO"
+   end
   end
 
  private
@@ -33,7 +41,7 @@ class CardsController < ApplicationController
  end
 
  def card_params
-  params.permit(:card).permit(:name, :suit_id, :key_words, :img, :likes)
+  params.require(:card).permit(:name, :key_words, :img, :likes)
  end
 
 end

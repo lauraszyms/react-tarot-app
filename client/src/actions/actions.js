@@ -51,18 +51,16 @@ export function createComment(data) {
     }).catch(err => err);
 }
 
-export function addLike(card, count) {
-   card.likes = card.likes + 1
-  console.log(JSON.stringify(card))
+export function addLike(card) {
+  console.log(JSON.stringify({card}))
     let url = `http://localhost:3001/cards/${card.id}`
     return fetch(url, {
         method: 'PUT',
         mode: 'CORS',
         headers: {
-            'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
-        credentials: 'same-origin',
-        body: JSON.stringify(card)
+        body: JSON.stringify({card})
     }).then(res => {
         return res;
     }).catch(err => err);

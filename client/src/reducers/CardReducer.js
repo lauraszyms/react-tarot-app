@@ -22,3 +22,12 @@ export function cards(state = [], action) {
             return state;
     }
 }
+
+export function addLike(state = [], action) {
+    switch (action.type) {
+        case 'ADD_LIKE':
+            return action.addLike;
+        default:
+            return state;
+    }
+}
