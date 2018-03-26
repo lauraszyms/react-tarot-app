@@ -39,12 +39,6 @@ class Card extends React.Component {
     }
   }
 
-  // const mapDispatchToProps = (dispatch) => {
-  //     return {
-  //         fetchLike: (card) => dispatch(addLike(card))
-  //     };
-  // };
-
 
 
 export default Card;
