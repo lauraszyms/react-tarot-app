@@ -20,6 +20,13 @@ export function cardsFetchDataSuccess(cards) {
     };
 }
 
+export function likesSuccess(card) {
+    return {
+        type: 'LIKE_SUCCESS',
+        card
+    };
+}
+
 export function cardsFetchData(url) {
     return (dispatch) => {
         dispatch(cardsIsLoading(true));
@@ -52,16 +59,26 @@ export function createComment(data) {
 }
 
 export function addLike(card) {
-  console.log(JSON.stringify({card}))
-    let url = `http://localhost:3001/cards/${card.id}`
-    return fetch(url, {
+  return (dispatch) => {
+     fetch(`http://localhost:3001/cards/${card.id}`, {
         method: 'PUT',
         mode: 'CORS',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({card})
-    }).then(res => {
-        return res;
-    }).catch(err => err);
+    }).then((response) => response.json())
+      .then((updatedCard) => {
+        dispatch(likesSuccess(updatedCard))
+      })
+      .catch(err => err);
+    }
+}
+
+export function fetchComments() {
+  return (dispatch) => {
+    fetch('http://localhost:3001/comments')
+    .then((response) => response.json())
+    .then((comments) => dispatch({type:  "FETCH_COMMENTS_SUCCESS", comments}))
+  }
 }
