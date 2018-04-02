@@ -58,10 +58,11 @@ export class GoldenThread extends Component {
 
 
 const mapStateToProps = (state) => {
+
     return {
-        cards: state.cards,
-        hasErrored: state.cardsHasErrored,
-        isLoading: state.cardsIsLoading,
+        cards: state.cards.index,
+        hasErrored: state.cards.hasErrored,
+        isLoading: state.cards.isLoading,
     };
 };
 
