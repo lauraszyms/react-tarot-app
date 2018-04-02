@@ -7,6 +7,7 @@ import './index.css';
 import Reading from './containers/Reading';
 import { Provider } from 'react-redux';
 import GoldenThread from './containers/GoldenThread';
+import Comments from './containers/Comments';
 import Home from './components/Home';
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
@@ -31,6 +32,7 @@ const store = createStore(rootReducer, composeEnhancers(
            <Route exact path="/" component={Home} store={store}/>
            <Route path="/reading" component={Reading}/>
            <Route path="/golden-thread" component={GoldenThread}/>
+           <Route path="/comments" component={Comments}/>
           </div>
          </ConnectedRouter>
         </Provider>,
