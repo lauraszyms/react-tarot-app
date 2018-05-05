@@ -28,6 +28,8 @@ export class Reading extends Component {
       let presentId = randomId()
       let futureId = randomId()
 
+
+
       return (
           <div className="Reading">
            <div className="Navbar">
@@ -88,12 +90,12 @@ function randomId() {
 
 const mapStateToProps = (state) => {
     return {
-        cards: state.cards,
-        hasErrored: state.cardsHasErrored,
-        isLoading: state.cardsIsLoading,
-        pastCard: state.pastCard,
-        presentCard: state.presentCard,
-        futureCard: state.pastCard,
+        cards: state.cards.index,
+        hasErrored: state.cards.cardsHasErrored,
+        isLoading: state.cards.cardsIsLoading,
+        pastCard: state.cards.pastCard,
+        presentCard: state.cards.presentCard,
+        futureCard: state.cards.pastCard,
     };
 };
 
