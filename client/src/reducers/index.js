@@ -1,13 +1,13 @@
+
 import { combineReducers } from 'redux';
-import { cards, cardsHasErrored, cardsIsLoading  } from './CardReducer';
+import { cards } from './CardReducer';
+import comments from './CommentsReducer';
 import { routerReducer } from 'react-router-redux'
 
 
 const rootReducer = combineReducers({
-
   cards,
-  cardsHasErrored,
-  cardsIsLoading,
+  comments,
   router: routerReducer
 });
 
