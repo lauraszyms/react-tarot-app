@@ -14,10 +14,10 @@ class Home extends React.Component {
    render() {
       return (
         <div className="Home">
-         <Navbar/>
+         <Navbar history={this.props.history}/>
          <About/>
          <Readings/>
-         <Contact/>
+         <Contact history={this.props.history}/>
          <Footer/>
         </div>
       );
