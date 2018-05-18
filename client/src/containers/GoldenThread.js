@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { cardsFetchData } from '../actions/actions';
+import { Link } from 'react-router-dom';
+import Card from '../components/Card';
 
 
 
 export class GoldenThread extends Component {
 
+
   componentDidMount() {
       this.props.fetchData('http://localhost:3001/cards');
   }
+
 
   render() {
 
@@ -28,7 +32,7 @@ export class GoldenThread extends Component {
               <a className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" title="Toggle Navigation Menu">
                <i className="fa fa-bars"></i>
               </a>
-              <a href="http://localhost:3000" className="w3-bar-item w3-button">HOME</a>
+              <Link to="/" className="w3-bar-item w3-button">HOME</Link>
               </div>
              <div id="navDemo" className="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             </div>
@@ -43,12 +47,7 @@ export class GoldenThread extends Component {
            <div className="w3-row-padding">
             <div className="w3-col m3">
              {this.props.cards.map((card) => (
-               <div>
-                <img src={card.img} key={card.id} className="thumbnail responsive" alt="Golden Thread" style={{display: 'block', height: '220px', width: '151px', marginRight: 'auto', marginLeft: '630px',}}/>
-                 <div style={{width: '100%', marginRight: 'auto', marginLeft: '550px',}}>
-                <p><b/><i className="fa fa-star-half-full w3-center" key={card.id}></i>{card.name}-<b/><em>{card.key_words}</em></p>
-                </div>
-               </div>
+               <Card card={card} key={card.id}/>
              ))}
             </div>
            </div>
@@ -59,10 +58,11 @@ export class GoldenThread extends Component {
 
 
 const mapStateToProps = (state) => {
+
     return {
-        cards: state.cards,
-        hasErrored: state.cardsHasErrored,
-        isLoading: state.cardsIsLoading,
+        cards: state.cards.index,
+        hasErrored: state.cards.hasErrored,
+        isLoading: state.cards.isLoading,
     };
 };
 

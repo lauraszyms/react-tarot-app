@@ -37,12 +37,14 @@ constructor() {
 
 
  handleSubmit = (e) => {
+   e.preventDefault()
   alert("Thank you for your message!")
   createComment(this.state);
+  this.props.history.push('/comments')
 }
 
    render() {
-
+     console.log(this.props)
       return (
         <div className="Contact">
          <div className="bgimg-3 w3-display-container w3-opacity-min">
@@ -109,6 +111,8 @@ constructor() {
       );
     }
   }
+
+
 
 
 

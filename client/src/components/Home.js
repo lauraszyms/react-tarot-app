@@ -12,6 +12,7 @@ import Footer from '../components/Footer';
 class Home extends React.Component {
 
    render() {
+
       return (
         <div className="Home">
          <Navbar history={this.props.history}/>
